@@ -4,7 +4,7 @@ var path = require('path')
 
 module.exports = function (target, cb) {
   var opts = {
-    origin: path.join(__dirname, './compontent-template/')
+    origin: path.join(__dirname, './component-template/')
   , target: path.join(process.cwd(), target)
   , context: {
       CamelName: change.pascalCase(target)

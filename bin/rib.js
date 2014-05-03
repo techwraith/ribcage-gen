@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var gen = require('../index')
   , name = process.argv[2]
 

@@ -1,6 +1,6 @@
 var $ = window.$
   , Backbone = require('backbone')
-  , {{CamelName}} = require('./index.js')
+  , {{CamelName}} = require('../index.js')
 
 Backbone.$ = $
 

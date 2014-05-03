@@ -1,0 +1,33 @@
+{
+  "name": "ribcage-gen",
+  "version": "0.0.1",
+  "description": "A generator script for ribcage components",
+  "main": "index.js",
+  "bin": {
+    "ribcage-gen": "rib.js"
+  },
+  "dependencies": {
+    "change-case": "^2.1.1",
+    "hbs-dir": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Techwraith/ribcage-gen.git"
+  },
+  "keywords": [
+    "ribcage",
+    "backbone",
+    "handlebars",
+    "atomify"
+  ],
+  "author": "techwraith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Techwraith/ribcage-gen/issues"
+  },
+  "homepage": "https://github.com/Techwraith/ribcage-gen"
+}

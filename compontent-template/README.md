@@ -1,4 +1,4 @@
-#{{CamelName}}
+# {{CamelName}}
 
 ## Usage
 ```js

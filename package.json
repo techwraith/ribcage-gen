@@ -1,10 +1,10 @@
 {
   "name": "ribcage-gen",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A generator script for ribcage components",
   "main": "index.js",
   "bin": {
-    "ribcage-gen": "rib.js"
+    "ribcage-gen": "./bin/rib.js"
   },
   "dependencies": {
     "change-case": "^2.1.1",

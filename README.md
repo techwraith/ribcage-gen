@@ -13,7 +13,7 @@ npm install -g ribcage-gen
 ## Use
 
 ```sh
-ribcage-gen {{name}}
+ribcage-gen <name>
 ```
 
 Name should be a dash separated string.

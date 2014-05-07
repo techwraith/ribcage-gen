@@ -1,7 +1,7 @@
-var $ = window.$
+var $ = require('jquery')
   , Backbone = require('backbone')
-  , {{CamelName}} = require('../index.js')
+  , {{PascalName}} = require('../index.js')
 
 Backbone.$ = $
 
-// Show us how the {{CamelName}} component works
+// Show us how the {{PascalName}} component works

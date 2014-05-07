@@ -7,7 +7,8 @@ module.exports = function (target, cb) {
     origin: path.join(__dirname, './component-template/')
   , target: path.join(process.cwd(), target)
   , context: {
-      CamelName: change.pascalCase(target)
+      PascalName: change.pascalCase(target)
+    , camelName: change.camelCase(target)
     , name: target
     }
   }

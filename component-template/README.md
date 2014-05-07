@@ -1,8 +1,11 @@
-# {{CamelName}}
+# {{PascalName}}
 
 ## Usage
 ```js
-  var {{CamelName}} = require('{{name}}')
+  var {{PascalName}} = require('{{name}}')
+    , options = {}
+    , {{camelName}} = new {{PascalName}}(options)
+
 ```
 
 ## Options
@@ -14,6 +17,7 @@
 ## Methods
 
 ## Tests
+Tests are in [prova](https://github.com/azer/prova).
 
 ## Developing
 Install [ribcage-preview](https://github.com/Techwraith/ribcage-preview)

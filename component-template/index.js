@@ -1,6 +1,6 @@
 var Base = require('ribcage-view')
 
-var {{CamelName}} = Base.extend({
+var {{PascalName}} = Base.extend({
 
   template: require('./template.html.hbs')
 
@@ -23,4 +23,4 @@ var {{CamelName}} = Base.extend({
 
 })
 
-module.exports = {{CamelName}}
+module.exports = {{PascalName}}

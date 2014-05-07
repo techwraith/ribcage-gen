@@ -1,4 +1,4 @@
-# {{CamelName}}
+# {{PascalName}}
 
 ## Usage
 ```js

@@ -2,7 +2,10 @@
 
 ## Usage
 ```js
-  var {{CamelName}} = require('{{name}}')
+  var {{PascalName}} = require('{{name}}')
+    , options = {}
+    , {{camelName}} = new {{PascalName}}(options)
+
 ```
 
 ## Options

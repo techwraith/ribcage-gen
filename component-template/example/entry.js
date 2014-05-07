@@ -1,4 +1,4 @@
-var $ = window.$
+var $ = require('jquery')
   , Backbone = require('backbone')
   , {{PascalName}} = require('../index.js')
 

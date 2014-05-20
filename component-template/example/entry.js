@@ -8,6 +8,6 @@ Backbone.$ = $
 
 
 // Show us how the {{PascalName}} component works
-camelName = new PascalName({
+{{camelName}} = new {{PascalName}}({
   el: $body
 })

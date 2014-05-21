@@ -5,7 +5,10 @@
   var {{PascalName}} = require('{{name}}')
     , options = {}
     , {{camelName}} = new {{PascalName}}(options)
+```
 
+```css
+@import "{{name}}";
 ```
 
 ## Options
@@ -20,11 +23,12 @@
 Tests are in [prova](https://github.com/azer/prova).
 
 ## Developing
-Install [ribcage-preview](https://github.com/Techwraith/ribcage-preview)
+Install [ribcage](https://github.com/Techwraith/ribcage)
 
 ```sh
-npm i -g ribcage-preview
+npm i -g ribcage
+ribcage preview .
 ```
 
-Open [http://localhost:4000/default]
+Open [http://localhost:4000/default](http://localhost:4000/default)
 

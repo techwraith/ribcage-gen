@@ -5,7 +5,10 @@
   var {{PascalName}} = require('{{name}}')
     , options = {}
     , {{camelName}} = new {{PascalName}}(options)
+```
 
+```css
+@import "{{name}}";
 ```
 
 ## Options

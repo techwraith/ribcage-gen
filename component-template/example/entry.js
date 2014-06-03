@@ -6,8 +6,7 @@ var $ = require('jquery')
 
 Backbone.$ = $
 
-
 // Show us how the {{PascalName}} component works
 {{camelName}} = new {{PascalName}}({
-  el: $body
 })
+$body.append({{camelName}}.el)

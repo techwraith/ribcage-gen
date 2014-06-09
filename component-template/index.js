@@ -6,18 +6,23 @@ var {{PascalName}} = Base.extend({
 
 , className: '{{name}}'
 
-// Custom Methods
+// DOM events
+// setup subviews
 
 // Lifecycle Methods
-, afterInit: function () {
+, beforeInit: function beforeInit() {
+
+  }
+  
+, afterInit: function afterInit() {
 
   }
 
-, afterRender: function () {
+, afterRender: function afterRender() {
 
   }
 
-, context: function () {
+, context: function context() {
 
   }
 

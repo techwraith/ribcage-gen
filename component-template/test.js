@@ -4,7 +4,7 @@ var test = require('prova')
     return new {{PascalName}}(options)
   }
 
-test('{{PascalName}} Component: beforeInit functions', function(t){
+test('{{PascalName}} Component: constructor', function(t){
 
   var view = newView()
   t.equal(
@@ -16,7 +16,7 @@ test('{{PascalName}} Component: beforeInit functions', function(t){
   t.end()
 })
 
-test('{{PascalName}} Component: custom method', function(t){
+test('{{PascalName}} Component: beforeInit', function(t){
   var view = newView()
 
   t.end()

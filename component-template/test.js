@@ -1,11 +1,14 @@
 var test = require('prova')
   , {{PascalName}} = require('./index.js')
+  , newView = function newView(options){
+    return new {{PascalName}}(options)
+  }
 
-test('{{PascalName}} Component: lifecycle functions', function(t){
+test('{{PascalName}} Component: beforeInit functions', function(t){
 
-  var {{camelName}} = new {{PascalName}}()
+  var view = newView()
   t.equal(
-    typeof {{camelName}}
+    typeof view
     , 'object'
     , 'creates an object'
   )
@@ -14,7 +17,7 @@ test('{{PascalName}} Component: lifecycle functions', function(t){
 })
 
 test('{{PascalName}} Component: custom method', function(t){
-  var {{camelName}} = new {{PascalName}}()
+  var view = newView()
 
   t.end()
 })

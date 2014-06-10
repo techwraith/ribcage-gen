@@ -1,12 +1,12 @@
 var test = require('prova')
   , {{PascalName}} = require('./index.js')
-  , newView = function newView(options){
+  , createView = function createView(options){
     return new {{PascalName}}(options)
   }
 
 test('{{PascalName}} Component: constructor', function(t){
 
-  var view = newView()
+  var view = createView()
   t.equal(
     typeof view
     , 'object'
@@ -17,7 +17,7 @@ test('{{PascalName}} Component: constructor', function(t){
 })
 
 test('{{PascalName}} Component: beforeInit', function(t){
-  var view = newView()
+  var view = createView()
 
   t.end()
 })

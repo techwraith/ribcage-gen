@@ -1,5 +1,9 @@
-/* Styles for the {{PascalName}} component */
+:root {
+  /* define your namespaced vars here
+  var-{{name}}-font-size: 1rem;
+  */
+}
 
 .{{name}} {
-  
+
 }

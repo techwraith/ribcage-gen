@@ -10,14 +10,14 @@ var {{PascalName}} = Base.extend({
 
 , className: '{{name}}'
 
-, State = State.extend({
+, State: State.extend({
     props: {
 
     }
   })
 
 , events: {
-    'keyup input': 'onInputKeyup'
+    // 'keyup input': 'onInputKeyup'
   }
 
 // DOM Events
@@ -46,7 +46,7 @@ var {{PascalName}} = Base.extend({
 
 // Lifecycle Methods
 , beforeInit: function beforeInit(options){
-    this.state = new this.State(_.omit(options, ['model', 'collection'])
+    this.state = new this.State(_.omit(options, ['model', 'collection']))
   }
 
 // instantiate subviews

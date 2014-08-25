@@ -50,8 +50,9 @@ test('{{PascalName}}#bindEvents', function (t){
 test('{{PascalName}}#beforeInit', function(t){
   var view = createView()
     , fn = view.beforeInit
+    , options = {}
 
-  fn.call(view)
+  fn.call(view, options)
   t.ok(
     view.state instanceof view.State
     , 'creates a state model'

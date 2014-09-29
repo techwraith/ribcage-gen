@@ -1,6 +1,6 @@
 :root {
   /* define your namespaced vars here
-  var-{{name}}-font-size: 1rem;
+  --fontSize-normal-{{name}}: 1rem;
   */
 }
 

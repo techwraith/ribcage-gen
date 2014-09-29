@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "change-case": "^2.1.1",
-    "hbs-dir": "^0.1.0"
+    "hbs-dir": "^0.1.0",
+    "minimist": "^1.1.0"
   },
   "devDependencies": {},
   "scripts": {

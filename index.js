@@ -13,6 +13,7 @@ typeMap.jsx = typeMap.react
 
 module.exports = function (options, cb) {
   if (!options) throw new Error('optionsa are required')
+  if (!typeMap[options.type]) throw new Error('type ' + options.type + ' not found')
 
   var nameParts = options.target.split(path.sep)
   , name = nameParts[nameParts.length - 1]
@@ -26,5 +27,5 @@ module.exports = function (options, cb) {
       }
     }
 
-  hbsDir(opts, cb.bind(null, opts.context))
+  hbsDir(opts, cb)
 }

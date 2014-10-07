@@ -1,7 +1,13 @@
 var Base = require('ribcage-view')
   , _ = require('lodash')
   , State = require('ampersand-state').extend({
+    // forces you define all properties on the state model
+    // this helps catch bugs and makes code more readable
     extraProperties: 'reject'
+    // output the derived properties and the props in toJSON
+    , toJSON: function toJSON(){
+      return _.extend(this.serialize(), this.getAttributes({derived: true}))
+    }
   })
 
 var {{PascalName}} = Base.extend({

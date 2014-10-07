@@ -1,3 +1,5 @@
+'use strict';
+
 var Base = require('ribcage-view')
   , _ = require('lodash')
   , State = require('ampersand-state').extend({

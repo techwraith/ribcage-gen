@@ -47,6 +47,22 @@ var {{PascalName}} = Base.extend({
 //     console.log(value)
 //   }
 
+// helper methods
+// e.g.
+// , findModelIndex: function findModelIndex(model){
+//     this.collection.findIndex(model)
+//   }
+
+// public methods
+// e.g.
+// , getLabel: function getLabel(){
+//     return this.state.label
+//   }
+//
+// , setLabel: function setLabel(label){
+//     this.state.label = label
+//   }
+
 // Create Subviews
 // , createSubviewX: function createSubviewX(){
 //     return new SubviewX({})

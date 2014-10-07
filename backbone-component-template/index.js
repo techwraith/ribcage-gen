@@ -50,17 +50,17 @@ var {{PascalName}} = Base.extend({
   }
 
 // instantiate subviews
-, afterInit: function afterInit() {
+, afterInit: function afterInit(){
     // e.g.
     // this.subviewX = this.createSubviewX()
   }
 
-, afterRender: function afterRender() {
+, afterRender: function afterRender(){
     // e.g.
     // this.appendSubview(this.subviewX)
   }
 
-, context: function context() {
+, context: function context(){
     return this.state.toJSON()
   }
 

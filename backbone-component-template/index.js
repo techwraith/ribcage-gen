@@ -37,10 +37,11 @@ var Base = require('ribcage-view')
 // Backbone Events
 , bindEvents: function bindEvents(){
     // always stopListening so we don't reattach multiple listeners
-    if (this.state) this.stopListening(this.state)
-
-    // listen to state, model, etc… events
-    // this.listenTo(this.state, 'change:text', this.onStateChangeText)
+    if (this.state){
+      this.stopListening(this.state)
+      // listen to state, model, etc… events
+      // this.listenTo(this.state, 'change:text', this.onStateChangeText)
+    }
   }
 
 // e.g.

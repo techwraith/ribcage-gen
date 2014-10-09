@@ -2,6 +2,10 @@
 
 var Base = require('ribcage-view')
   , _ = require('lodash')
+  , rt = require('../../../lib/rt')
+  , cache = require('../../../lib/cache')
+  , Button = require('../../peices/button')
+  , {{PascalName}}Step = require('../../steps/{{name}}')
   , State = require('ampersand-state').extend({
     // forces you define all properties on the state model
     // this helps catch bugs and makes code more readable
@@ -15,24 +19,24 @@ var Base = require('ribcage-view')
 
 {{PascalName}} = Base.extend({
 
-  template: require('./template.html.hbs')
+  className: '{{name}}'
 
-, className: '{{name}}'
+, stackBranchStart: false
+
+, navBarTitle: '{{name}}'
+
+// back buttons are the default, you don't need to define one
+// , navBarLeftButton: new Button({icon: 'chevron-left'})
+
+// You should define a right button though
+, navBarRightButton: new Button({label: 'Next'})
+
 
 , State: State.extend({
     props: {
 
     }
   })
-
-, events: {
-    // 'keyup input': 'onInputKeyup'
-  }
-
-// DOM Events
-// , onInputKeyup: function onInputKeyup(e){
-//    this.state.text = e.target.value
-//   }
 
 // Backbone Events
 , bindEvents: function bindEvents(){
@@ -66,9 +70,9 @@ var Base = require('ribcage-view')
 //   }
 
 // Create Subviews
-// , createSubviewX: function createSubviewX(){
-//     return new SubviewX({})
-//   }
+, create{{PascalName}}Step: function create{{PascalName}}Step(){
+    return new {{PascalName}}Step({})
+  }
 
 // Lifecycle Methods
 , beforeInit: function beforeInit(options){
@@ -78,16 +82,20 @@ var Base = require('ribcage-view')
 // instantiate subviews
 , afterInit: function afterInit(){
     // e.g.
-    // this.subviewX = this.createSubviewX()
+    this.{{camelName}}Step = this.create{{PascalName}}Step()
+  }
+
+// load in all necessary data here
+// if you don't need this method, you should delete it
+// NOTE: you might need to create subviews here after you've loaded the necessary
+// models and/or collections
+// loadData docs: https://github.com/Techwraith/ribcage-view#loaddatafunction-done
+, loadData: function loadData(done){
+    done()
   }
 
 , afterRender: function afterRender(){
-    // e.g.
-    // this.appendSubview(this.subviewX)
-  }
-
-, context: function context(){
-    return this.state.toJSON()
+    this.appendSubview(this.{{camelName}}Step)
   }
 
 })

@@ -6,6 +6,7 @@ var hbsDir = require('hbs-dir')
   , typeMap = {
     backbone: 'backbone-component-template'
     , react: 'react-component-template'
+    , pane: 'backbone-pane-template'
   }
 
 // aliases for the type map

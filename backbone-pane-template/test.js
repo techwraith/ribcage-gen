@@ -59,14 +59,17 @@ test('{{PascalName}}#beforeInit', function(t){
   t.end()
 })
 
-test('{{PascalName}}#context', function(t){
+test('{{PascalName}} properties', function(t){
   var view = createView()
-    , fn = view.context
 
-  t.deepEqual(
-    fn.call(view)
-    , view.state.toJSON()
-    , 'uses the state to pass variables to the template'
+  t.ok(
+    _.has(view, 'navBarTitle')
+    , 'sets a title'
+  )
+
+  t.ok(
+    _.has(view, 'navBarRightButton')
+    , 'sets a right button'
   )
 
   t.end()

@@ -2,9 +2,9 @@
 
 var Base = require('ribcage-view')
   , _ = require('lodash')
-  , rt = require('../../../lib/rt')
-  , cache = require('../../../lib/cache')
-  , Button = require('../../peices/button')
+  , rt = require('../../../lib/rt.js')
+  , cache = require('../../../app/cache/')
+  , Button = require('../../pieces/button')
   , {{PascalName}}Step = require('../../steps/{{name}}')
   , State = require('ampersand-state').extend({
     // forces you define all properties on the state model

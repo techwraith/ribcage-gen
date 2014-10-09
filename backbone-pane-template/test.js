@@ -4,6 +4,13 @@ var test = require('prova')
   , createView = function createView(options){
     return new {{PascalName}}(options)
   }
+  , stopListening
+  , setup = function setup(){
+    stopListening = sinon.spy({{PascalName}}.protoype, 'stopListening')
+  }
+  , cleanup = function cleanup(){
+    stopListening.restore()
+  }
 
 test('{{PascalName}}: constructor', function(t){
   var view = createView()
@@ -20,15 +27,6 @@ test('{{PascalName}}: constructor', function(t){
 test('{{PascalName}}#bindEvents', function (t){
   var view = createView()
     , fn = view.bindEvents
-    , stopListening
-
-  function setup(){
-    stopListening = sinon.spy(view, 'stopListening')
-  }
-
-  function cleanup(){
-    stopListening.restore()
-  }
 
   setup()
 

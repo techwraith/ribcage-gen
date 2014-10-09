@@ -5,6 +5,7 @@ var Base = require('ribcage-view')
   , rt = require('../../../lib/rt')
   , cache = require('../../../lib/cache')
   , Button = require('../../peices/button')
+  , {{PascalName}}Step = require('../../steps/{{name}}')
   , State = require('ampersand-state').extend({
     // forces you define all properties on the state model
     // this helps catch bugs and makes code more readable
@@ -69,10 +70,9 @@ var Base = require('ribcage-view')
 //   }
 
 // Create Subviews
-// , createSubviewX: function createSubviewX(){
-//     return new SubviewX({})
-//   }
-
+, create{{PascalName}}Step: function create{{PascalName}}Step(){
+    return new {{PascalName}}Step({})
+  }
 
 // Lifecycle Methods
 , beforeInit: function beforeInit(options){
@@ -82,7 +82,7 @@ var Base = require('ribcage-view')
 // instantiate subviews
 , afterInit: function afterInit(){
     // e.g.
-    // this.subviewX = this.createSubviewX()
+    this.{{camelName}}Step = this.create{{PascalName}}Step()
   }
 
 // load in all necessary data here
@@ -95,8 +95,7 @@ var Base = require('ribcage-view')
   }
 
 , afterRender: function afterRender(){
-    // e.g.
-    // this.appendSubview(this.subviewX)
+    this.appendSubview(this.{{camelName}}Step)
   }
 
 })

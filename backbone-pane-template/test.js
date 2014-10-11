@@ -6,7 +6,7 @@ var test = require('prova')
   }
   , stopListening
   , setup = function setup(){
-    stopListening = sinon.spy({{PascalName}}.protoype, 'stopListening')
+    stopListening = sinon.spy({{PascalName}}.prototype, 'stopListening')
   }
   , cleanup = function cleanup(){
     stopListening.restore()

@@ -79,11 +79,8 @@ var Base = require('ribcage-view')
     this.state = new this.State(_.omit(options, ['model', 'collection']))
   }
 
-// instantiate subviews
-, afterInit: function afterInit(){
-    // e.g.
-    this.{{camelName}}Step = this.create{{PascalName}}Step()
-  }
+// , afterInit: function afterInit(){
+//   }
 
 // load in all necessary data here
 // if you don't need this method, you should delete it
@@ -92,6 +89,11 @@ var Base = require('ribcage-view')
 // loadData docs: https://github.com/Techwraith/ribcage-view#loaddatafunction-done
 , loadData: function loadData(done){
     done()
+  }
+
+// instantiate subviews AFTER loadData called
+, beforeRender: function beforeRender(){
+    this.{{camelName}}Step = this.create{{PascalName}}Step()
   }
 
 , afterRender: function afterRender(){

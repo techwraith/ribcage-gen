@@ -28,9 +28,10 @@ var Base = require('ribcage-view')
 // back buttons are the default, you don't need to define one
 // , navBarLeftButton: new Button({icon: 'chevron-left'})
 
-// You should define a right button though
+// You may want to define a right button though.
+// Set it to false otherwise.
+// Don't forget to set a listener in BindEvents.
 , navBarRightButton: new Button({label: 'Next'})
-
 
 , State: State.extend({
     props: {
@@ -79,9 +80,7 @@ var Base = require('ribcage-view')
     this.state = new this.State(_.omit(options, ['model', 'collection']))
   }
 
-// instantiate subviews
 , afterInit: function afterInit(){
-    // e.g.
     this.{{camelName}}Step = this.create{{PascalName}}Step()
   }
 
@@ -93,6 +92,9 @@ var Base = require('ribcage-view')
 , loadData: function loadData(done){
     done()
   }
+
+// , beforeRender: function beforeRender(){
+//   }
 
 , afterRender: function afterRender(){
     this.appendSubview(this.{{camelName}}Step)

@@ -63,12 +63,12 @@ test('{{PascalName}} properties', function(t){
   var view = createView()
 
   t.ok(
-    _.has(view, 'navBarTitle')
+    view.navBarTitle
     , 'sets a title'
   )
 
   t.ok(
-    _.has(view, 'navBarRightButton')
+    view.navBarRightButton
     , 'sets a right button'
   )
 

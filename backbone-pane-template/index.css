@@ -1,2 +1,2 @@
 /* you should probably only import one css file */
-@import "";
+@import "'../../steps/{{name}}";

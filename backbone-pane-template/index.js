@@ -28,9 +28,10 @@ var Base = require('ribcage-view')
 // back buttons are the default, you don't need to define one
 // , navBarLeftButton: new Button({icon: 'chevron-left'})
 
-// You should define a right button though
+// You may want to define a right button though.
+// Set it to false otherwise.
+// Don't forget to set a listener in BindEvents.
 , navBarRightButton: new Button({label: 'Next'})
-
 
 , State: State.extend({
     props: {

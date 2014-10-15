@@ -12,7 +12,7 @@ var test = require('prova')
     stopListening.restore()
   }
 
-test('{{PascalName}}: constructor', function(t){
+test('Pane: {{PascalName}}: constructor', function(t){
   var view = createView()
 
   t.equal(
@@ -24,7 +24,7 @@ test('{{PascalName}}: constructor', function(t){
   t.end()
 })
 
-test('{{PascalName}}#bindEvents', function (t){
+test('Pane: {{PascalName}}#bindEvents', function (t){
   var view = createView()
     , fn = view.bindEvents
 
@@ -45,7 +45,7 @@ test('{{PascalName}}#bindEvents', function (t){
   t.end()
 })
 
-test('{{PascalName}}#beforeInit', function(t){
+test('Pane: {{PascalName}}#beforeInit', function(t){
   var view = createView()
     , fn = view.beforeInit
     , options = {}
@@ -59,7 +59,7 @@ test('{{PascalName}}#beforeInit', function(t){
   t.end()
 })
 
-test('{{PascalName}} properties', function(t){
+test('Pane: {{PascalName}} properties', function(t){
   var view = createView()
 
   t.ok(

@@ -1,8 +1,10 @@
 var test = require('prova')
   , {{PascalName}} = require('./index.js')
   , sinon = require('sinon')
+  , _ = require('lodash')
+  , defaultOptions = {}
   , createView = function createView(options){
-    return new {{PascalName}}(options)
+    return new {{PascalName}}(_.defaults(options || {}, defaultOptions))
   }
   , stopListening
   , setup = function setup(){
@@ -48,9 +50,8 @@ test('{{PascalName}}#bindEvents', function(t){
 test('{{PascalName}}#beforeInit', function(t){
   var view = createView()
     , fn = view.beforeInit
-    , options = {}
 
-  fn.call(view, options)
+  fn.call(view, defaultOptions)
   t.ok(
     view.state instanceof view.State
     , 'creates a state model'

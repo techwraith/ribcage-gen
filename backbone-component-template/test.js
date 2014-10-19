@@ -24,7 +24,7 @@ test('{{PascalName}}: constructor', function(t){
   t.end()
 })
 
-test('{{PascalName}}#bindEvents', function (t){
+test('{{PascalName}}#bindEvents', function(t){
   var view = createView()
     , fn = view.bindEvents
 

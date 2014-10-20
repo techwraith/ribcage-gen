@@ -19,7 +19,7 @@ var Base = require('ribcage-view')
 
 {{PascalName}} = Base.extend({
 
-  className: '{{name}}'
+  className: '{{camelName}}'
 
 , stackBranchStart: false
 

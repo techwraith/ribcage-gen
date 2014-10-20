@@ -23,7 +23,7 @@ var Base = require('ribcage-view')
 
 , stackBranchStart: false
 
-, navBarTitle: '{{name}}'
+, navBarTitle: '{{titleName}}'
 
 // back buttons are the default, you don't need to define one
 // , navBarLeftButton: new Button({icon: 'chevron-left'})

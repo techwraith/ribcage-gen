@@ -72,7 +72,7 @@ var Base = require('ribcage-view')
 
 // Lifecycle Methods
 , beforeInit: function beforeInit(options){
-    this.state = new this.State(_.omit(options, ['model', 'collection']))
+    this.state = new this.State(options)
   }
 
 // instantiate subviews

@@ -34,8 +34,9 @@ test('{{PascalName}}#bindEvents', function(t){
 
   // call bind events
   fn.call(view)
-  t.ok(
-    stopListening.calledOnce
+  t.equal(
+    stopListening.callCount
+    , 1
     , 'calls stopListening so that events aren\'t bound multiple times'
   )
   t.ok(

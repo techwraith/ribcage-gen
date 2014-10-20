@@ -24,6 +24,7 @@ module.exports = function (options, cb) {
     , context: {
         PascalName: change.pascalCase(name)
       , camelName: change.camelCase(name)
+      , titleName: change.titleCase(name)
       , name: name
       }
     }

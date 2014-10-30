@@ -17,7 +17,7 @@ var Base = require('ribcage-view')
 
   template: require('./template.html.hbs')
 
-, className: '{{name}}'
+, className: '{{camelName}}'
 
 , State: State.extend({
     props: {

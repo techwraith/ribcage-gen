@@ -1,12 +1,12 @@
 var $ = require('jquery')
   , Backbone = require('backbone')
-  , {{PascalName}} = require('../index.js')
+  , {{PascalName}}Step = require('../step.js')
   , $body = $('body')
-  , {{camelName}}
+  , {{camelName}}Step
 
 Backbone.$ = $
 
 // Show us how the {{PascalName}} component works
-{{camelName}} = new {{PascalName}}({
+{{camelName}}Step = new {{PascalName}}Step({
 })
-$body.append({{camelName}}.el)
+$body.append({{camelName}}Step.el)

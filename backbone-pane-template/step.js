@@ -2,10 +2,6 @@
 
 var Base = require('ribcage-view')
   , _ = require('lodash')
-  , rt = require('../../../lib/rt.js')
-  , cache = require('../../../app/cache/')
-  , Button = require('../../pieces/button')
-  , {{PascalName}}Step = require('./step')
   , State = require('ampersand-state').extend({
     // forces you define all properties on the state model
     // this helps catch bugs and makes code more readable
@@ -15,23 +11,13 @@ var Base = require('ribcage-view')
       return _.extend(this.serialize(), this.getAttributes({derived: true}))
     }
   })
-  , {{PascalName}}Pane
+  , {{PascalName}}Step
 
-{{PascalName}}Pane = Base.extend({
+{{PascalName}}Step = Base.extend({
 
-  className: '{{camelName}}Pane'
+  template: require('./template.html.hbs')
 
-, stackBranchStart: false
-
-, navBarTitle: '{{titleName}}'
-
-// back buttons are the default, you don't need to define one
-// , navBarLeftButton: new Button({icon: 'chevron-left'})
-
-// You may want to define a right button though.
-// Set it to false otherwise.
-// Don't forget to set a listener in BindEvents.
-, navBarRightButton: new Button({label: 'Next'})
+, className: '{{camelName}}Step'
 
 , State: State.extend({
     props: {
@@ -71,9 +57,9 @@ var Base = require('ribcage-view')
 //   }
 
 // Create Subviews
-, create{{PascalName}}Step: function create{{PascalName}}Step(){
-    return new {{PascalName}}Step({})
-  }
+// , createSubviewName: function createSubviewName(){
+//     return new SubviewName({})
+//   }
 
 // Lifecycle Methods
 , beforeInit: function beforeInit(options){
@@ -81,7 +67,7 @@ var Base = require('ribcage-view')
   }
 
 , afterInit: function afterInit(){
-    this.{{camelName}}Step = this.create{{PascalName}}Step()
+    // this.subviewName = this.createSubviewName()
   }
 
 // load in all necessary data here
@@ -97,7 +83,7 @@ var Base = require('ribcage-view')
 //   }
 
 , afterRender: function afterRender(){
-    this.appendSubview(this.{{camelName}}Step)
+    // this.appendSubview(this.SubviewName)
   }
 
 })

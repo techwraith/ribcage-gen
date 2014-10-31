@@ -1,18 +1,18 @@
 var test = require('prova')
-  , {{PascalName}} = require('./index.js')
+  , {{PascalName}}Step = require('./index.js')
   , sinon = require('sinon')
   , createView = function createView(options){
-    return new {{PascalName}}(options)
+    return new {{PascalName}}Step(options)
   }
   , stopListening
   , setup = function setup(){
-    stopListening = sinon.spy({{PascalName}}.prototype, 'stopListening')
+    stopListening = sinon.spy({{PascalName}}Step.prototype, 'stopListening')
   }
   , cleanup = function cleanup(){
     stopListening.restore()
   }
 
-test('Pane: {{PascalName}}: constructor', function(t){
+test('Step: {{PascalName}}: constructor', function(t){
   var view = createView()
 
   t.equal(
@@ -24,7 +24,7 @@ test('Pane: {{PascalName}}: constructor', function(t){
   t.end()
 })
 
-test('Pane: {{PascalName}}#bindEvents', function (t){
+test('Step: {{PascalName}}#bindEvents', function (t){
   var view = createView()
     , fn = view.bindEvents
 
@@ -46,7 +46,7 @@ test('Pane: {{PascalName}}#bindEvents', function (t){
   t.end()
 })
 
-test('Pane: {{PascalName}}#beforeInit', function(t){
+test('Step: {{PascalName}}#beforeInit', function(t){
   var view = createView()
     , fn = view.beforeInit
     , options = {}
@@ -60,7 +60,7 @@ test('Pane: {{PascalName}}#beforeInit', function(t){
   t.end()
 })
 
-test('Pane: {{PascalName}} properties', function(t){
+test('Step: {{PascalName}} properties', function(t){
   var view = createView()
 
   t.ok(

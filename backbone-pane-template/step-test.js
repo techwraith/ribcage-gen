@@ -59,19 +59,3 @@ test('Step: {{PascalName}}#beforeInit', function(t){
 
   t.end()
 })
-
-test('Step: {{PascalName}} properties', function(t){
-  var view = createView()
-
-  t.ok(
-    view.navBarTitle
-    , 'sets a title'
-  )
-
-  t.ok(
-    view.navBarRightButton
-    , 'sets a right button'
-  )
-
-  t.end()
-})

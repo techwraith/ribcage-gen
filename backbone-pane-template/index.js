@@ -102,4 +102,4 @@ var Base = require('ribcage-view')
 
 })
 
-module.exports = {{PascalName}}
+module.exports = {{PascalName}}Pane

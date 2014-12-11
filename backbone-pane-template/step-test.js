@@ -1,5 +1,5 @@
 var test = require('prova')
-  , {{PascalName}}Step = require('./index.js')
+  , {{PascalName}}Step = require('./step.js')
   , sinon = require('sinon')
   , createView = function createView(options){
     return new {{PascalName}}Step(options)

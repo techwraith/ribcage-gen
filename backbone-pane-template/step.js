@@ -70,15 +70,6 @@ var Base = require('ribcage-view')
     // this.subviewName = this.createSubviewName()
   }
 
-// load in all necessary data here
-// if you don't need this method, you should delete it
-// NOTE: you might need to create subviews here after you've loaded the necessary
-// models and/or collections
-// loadData docs: https://github.com/Techwraith/ribcage-view#loaddatafunction-done
-, loadData: function loadData(done){
-    done()
-  }
-
 // , beforeRender: function beforeRender(){
 //   }
 

@@ -77,6 +77,14 @@ var Base = require('ribcage-view')
 
 // Lifecycle Methods
 , beforeInit: function beforeInit(options){
+    // check for required props
+    var requiredProps = this.State.prototype._definition
+
+    _.each(requiredProps, function eachRequiredProp(setting, prop){
+      if (setting.required && !options[prop])
+        throw new Error(this.className + ' requires ' + prop)
+    }, this)
+
     this.state = new this.State(options)
   }
 

@@ -1,8 +1,10 @@
 var test = require('prova')
   , {{PascalName}}Step = require('./step.js')
   , sinon = require('sinon')
+  , _ = require('lodash')
+  , defaultOptions = {}
   , createView = function createView(options){
-    return new {{PascalName}}Step(options)
+    return new {{PascalName}}(_.defaults(options || {}, defaultOptions))
   }
   , stopListening
   , setup = function setup(){
@@ -49,7 +51,7 @@ test('Step: {{PascalName}}#bindEvents', function (t){
 test('Step: {{PascalName}}#beforeInit', function(t){
   var view = createView()
     , fn = view.beforeInit
-    , options = {}
+    , options = defaultOptions
 
   fn.call(view, options)
   t.ok(

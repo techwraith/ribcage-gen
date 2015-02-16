@@ -1,8 +1,10 @@
 var test = require('prova')
   , {{PascalName}}Pane = require('./index.js')
   , sinon = require('sinon')
+  , _ = require('lodash')
+  , defaultOptions = {}
   , createView = function createView(options){
-    return new {{PascalName}}Pane(options)
+    return new {{PascalName}}(_.defaults(options || {}, defaultOptions))
   }
   , stopListening
   , setup = function setup(){

@@ -67,7 +67,7 @@ var Base = require('ribcage-view')
     var requiredProps = this.State.prototype._definition
 
     _.each(requiredProps, function eachRequiredProp(setting, prop){
-      if (setting.required && !options[prop])
+      if (setting.required && _.isUndefined(options[prop]))
         throw new Error(this.className + ' requires ' + prop)
     }, this)
 

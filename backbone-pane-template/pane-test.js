@@ -4,7 +4,7 @@ var test = require('prova')
   , _ = require('lodash')
   , defaultOptions = {}
   , createView = function createView(options){
-    return new {{PascalName}}(_.defaults(options || {}, defaultOptions))
+    return new {{PascalName}}Pane(_.defaults(options || {}, defaultOptions))
   }
   , stopListening
   , setup = function setup(){

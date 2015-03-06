@@ -31,12 +31,11 @@ Emitted when Z happens. `arg` is a Y.
 CSS classes that might be useful for the outside world. Probably not too useful if this is mostly a JS component.
 
 ## Tests
-Tests are in [prova](https://github.com/azer/prova). You can run them with:
+Tests are in [tape](https://github.com/substack/tape). You can run them with:
 
 ```bash
-prova -b -e -l chrome -t hbsfy test.js
+browserify -t hbsfy --debug | smokestack
 ```
-
 ## Developing
 Install [ribcage](https://github.com/Techwraith/ribcage)
 

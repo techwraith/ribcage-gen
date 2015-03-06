@@ -1,4 +1,4 @@
-var test = require('prova')
+var test = require('tape')
   , {{PascalName}}Pane = require('./index.js')
   , sinon = require('sinon')
   , _ = require('lodash')

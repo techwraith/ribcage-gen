@@ -1,4 +1,4 @@
-var test = require('prova')
+var test = require('tape')
   , {{PascalName}} = require('./index.js')
   , sinon = require('sinon')
   , createView = function createView(options){

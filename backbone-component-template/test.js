@@ -14,7 +14,7 @@ var test = require('tape')
     stopListening.restore()
   }
 
-test('{{PascalName}}: constructor', function(t){
+test('{{PascalName}}: constructor', function constructorTest(t){
   var view = createView()
 
   t.equal(
@@ -26,7 +26,7 @@ test('{{PascalName}}: constructor', function(t){
   t.end()
 })
 
-test('{{PascalName}}#bindEvents', function(t){
+test('{{PascalName}}#bindEvents', function bindEventsTest(t){
   var view = createView()
     , fn = view.bindEvents
 
@@ -48,7 +48,7 @@ test('{{PascalName}}#bindEvents', function(t){
   t.end()
 })
 
-test('{{PascalName}}#beforeInit', function(t){
+test('{{PascalName}}#beforeInit', function beforeInitTest(t){
   var view = createView()
     , fn = view.beforeInit
 
@@ -61,7 +61,7 @@ test('{{PascalName}}#beforeInit', function(t){
   t.end()
 })
 
-test('{{PascalName}}#context', function(t){
+test('{{PascalName}}#context', function contextTest(t){
   var view = createView()
     , fn = view.context
 

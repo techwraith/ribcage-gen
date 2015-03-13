@@ -51,7 +51,7 @@ test('Pane: {{PascalName}}#bindEvents', function (t){
 test('Pane: {{PascalName}}#beforeInit', function(t){
   var view = createView()
     , fn = view.beforeInit
-    , options = {}
+    , options = defaultOptions
 
   fn.call(view, options)
   t.ok(

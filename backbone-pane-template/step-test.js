@@ -14,7 +14,7 @@ var test = require('tape')
     stopListening.restore()
   }
 
-test('Step: {{PascalName}}: constructor', function(t){
+test('Step: {{PascalName}}: constructor', function constructorTest(t){
   var view = createView()
 
   t.equal(
@@ -26,7 +26,7 @@ test('Step: {{PascalName}}: constructor', function(t){
   t.end()
 })
 
-test('Step: {{PascalName}}#bindEvents', function (t){
+test('Step: {{PascalName}}#bindEvents', function bindEventsTest(t){
   var view = createView()
     , fn = view.bindEvents
 
@@ -48,7 +48,7 @@ test('Step: {{PascalName}}#bindEvents', function (t){
   t.end()
 })
 
-test('Step: {{PascalName}}#beforeInit', function(t){
+test('Step: {{PascalName}}#beforeInit', function beforeInitTest(t){
   var view = createView()
     , fn = view.beforeInit
     , options = defaultOptions

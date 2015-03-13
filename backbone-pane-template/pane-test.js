@@ -14,7 +14,7 @@ var test = require('tape')
     stopListening.restore()
   }
 
-test('Pane: {{PascalName}}: constructor', function(t){
+test('Pane: {{PascalName}}: constructor', function constructorTest(t){
   var view = createView()
 
   t.equal(
@@ -26,7 +26,7 @@ test('Pane: {{PascalName}}: constructor', function(t){
   t.end()
 })
 
-test('Pane: {{PascalName}}#bindEvents', function (t){
+test('Pane: {{PascalName}}#bindEvents', function bindEventsTest(t){
   var view = createView()
     , fn = view.bindEvents
 
@@ -48,7 +48,7 @@ test('Pane: {{PascalName}}#bindEvents', function (t){
   t.end()
 })
 
-test('Pane: {{PascalName}}#beforeInit', function(t){
+test('Pane: {{PascalName}}#beforeInit', function beforeInitTest(t){
   var view = createView()
     , fn = view.beforeInit
     , options = defaultOptions
@@ -62,7 +62,7 @@ test('Pane: {{PascalName}}#beforeInit', function(t){
   t.end()
 })
 
-test('Pane: {{PascalName}} properties', function(t){
+test('Pane: {{PascalName}} properties', function propertiesTest(t){
   var view = createView()
 
   t.ok(

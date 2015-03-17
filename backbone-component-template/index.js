@@ -11,9 +11,8 @@ var Base = require('ribcage-view')
       return _.extend(this.serialize(), this.getAttributes({derived: true}))
     }
   })
-  , {{PascalName}}
 
-{{PascalName}} = Base.extend({
+var {{PascalName}} = Base.extend({
 
   template: require('./template.html.hbs')
 

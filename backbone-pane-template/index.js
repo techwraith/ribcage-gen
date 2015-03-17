@@ -15,9 +15,8 @@ var Base = require('ribcage-view')
       return _.extend(this.serialize(), this.getAttributes({derived: true}))
     }
   })
-  , {{PascalName}}Pane
 
-{{PascalName}}Pane = Base.extend({
+var {{PascalName}}Pane = Base.extend({
 
   className: '{{camelName}}Pane'
 

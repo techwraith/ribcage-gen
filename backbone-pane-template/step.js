@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 var Base = require('ribcage-view')
   , _ = require('lodash')

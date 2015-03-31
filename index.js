@@ -29,7 +29,7 @@ module.exports = function (options, cb) {
       }
     }
   , successCallback = function successCallback (){
-    cb(opts.context)
+      cb(opts.context)
   }
 
   hbsDir(opts, successCallback)

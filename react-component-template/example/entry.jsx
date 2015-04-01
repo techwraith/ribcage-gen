@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 var {{PascalName}} = require('../index.jsx')
   , React = require('react')

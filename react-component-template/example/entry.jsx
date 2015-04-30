@@ -1,7 +1,8 @@
-'use strict'
+import React from 'react'
+import {{PascalName}} from '../index.jsx'
+import data from './data.js'
 
-var {{PascalName}} = require('../index.jsx')
-  , React = require('react')
-  , {{camelName}} = <{{PascalName}} name="{{PascalName}}"></{{PascalName}}>
+// expose React for debugging
+window.React = React
 
-React.renderComponent({{camelName}}, document.body)
+React.render(<{{PascalName}} {...data} />, document.getElementById('app'))

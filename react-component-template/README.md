@@ -4,26 +4,18 @@ Describe what this component does!
 
 ## Usage
 ```js
-  var {{PascalName}} = require('{{name}}')
-    , options = {}
-    , {{camelName}} = new {{PascalName}}(options)
+  import React from 'react'
+  import {{PascalName}} from '{{name}}'
+  React.render(<{{PascalName}} />, document.createElement('div'))
 ```
 
 ```css
 @import "{{name}}";
 ```
 
-## JS Options
+## Props
 ### `<String> option` **Required**
 Defaults to "hi". Controls X.
-
-## JS Methods
-### `doesThings(<Number> arg)`
-Does X. Arg is used for Y. Returns Z.
-
-## JS Events
-### eventName `(<Number> arg)`
-Emitted when Z happens. `arg` is a Y.
 
 ## CSS Variables
 
@@ -34,15 +26,18 @@ CSS classes that might be useful for the outside world. Probably not too useful 
 Tests are in [tape](https://github.com/substack/tape). You can run them with:
 
 ```bash
-browserify -t hbsfy --debug | smokestack
+browserify -t babelify --debug | smokestack
 ```
+
 ## Developing
 Install [ribcage](https://github.com/Techwraith/ribcage)
 
 ```sh
 npm i -g ribcage
 ribcage preview .
+# run with client side js enabled
+ribcage preview . -s
 ```
 
-Open [http://localhost:4000/default](http://localhost:4000/default)
+Open [http://localhost:4001/default](http://localhost:4001/default)
 

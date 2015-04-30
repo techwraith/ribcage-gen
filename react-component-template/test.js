@@ -1,74 +1,34 @@
-var test = require('tape')
-  , {{PascalName}} = require('./index.js')
-  , sinon = require('sinon')
-  , createView = function createView(options){
-    return new {{PascalName}}(options)
-  }
+import test from 'tape'
+import React from 'react'
+import {addons} from 'react/addons'
+import {{PascalName}} from './index.jsx'
+const {TestUtils} = addons
+const {Simulate, renderIntoDocument, isElement, createRenderer} = TestUtils
+const getReactNode = (dom, node) => TestUtils.findRenderedDOMComponentWithTag(dom, node)
+const getDOMNode = (dom, node) => getReactNode(dom, node).getDOMNode()
+const getDOMNodes = (dom, type) => TestUtils.scryRenderedDOMComponentsWithTag(dom, type)
+const getDOMNodeText = (dom, node) => getDOMNode(dom, node).textContent
 
-test('{{PascalName}}: constructor', function(t){
-  var view = createView()
+test('{{PascalName}}: constructor', (t) => {
+  const {{camelName}} = React.createElement({{PascalName}})
+  t.ok(
+    isElement({{camelName}})
+    , 'is a valid react component'
+  )
+
+  t.end()
+})
+
+// TODO: delete me. I'm just an example!
+test('{{PascalName}} rendered DOM', (t) => {
+  const name = 'Bert'
+  const {{camelName}} = React.createElement({{PascalName}}, {name})
+  const dom = renderIntoDocument({{camelName}})
 
   t.equal(
-    typeof view
-    , 'object'
-    , 'creates an object'
-  )
-
-  t.end()
-})
-
-test('{{PascalName}}#bindEvents', function (t){
-  var view = createView()
-    , fn = view.bindEvents
-    , stopListening
-
-  function setup(){
-    stopListening = sinon.spy(view, 'stopListening')
-  }
-
-  function cleanup(){
-    stopListening.restore()
-  }
-
-  setup()
-
-  // call bind events
-  fn.call(view)
-  t.ok(
-    stopListening.calledOnce
-    , 'calls stopListening so that events aren\'t bound multiple times'
-  )
-  t.ok(
-    stopListening.calledWith(view.state)
-    , 'calls stopListening with the state so that not all listeners are removed'
-  )
-
-  cleanup()
-  t.end()
-})
-
-test('{{PascalName}}#beforeInit', function(t){
-  var view = createView()
-    , fn = view.beforeInit
-    , options = {}
-
-  fn.call(view, options)
-  t.ok(
-    view.state instanceof view.State
-    , 'creates a state model'
-  )
-
-  t.end()
-})
-
-test('{{PascalName}}#context', function(t){
-  var view = createView()
-    , fn = view.context
-
-  t.deepEqual(
-    fn.call(view)
-    , view.state.toJSON()
-    , 'uses the state to pass variables to the template'
+    getDOMNodeText(dom, 'h1')
+    , name
+    , 'renders the `name` prop'
   )
 
   t.end()

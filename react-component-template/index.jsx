@@ -1,18 +1,15 @@
-'use strict'
+import {default as React, PropTypes} from 'react'
+const namespace = '{{camelName}}'
 
-var React = require('react')
-
-module.exports = React.createClass({
-  getInitialState(){
-    return {name: null}
-  }
-  , onChange(e){
-    this.setState({name: e.target.value})
-  }
-  , render(){
-    return <div><h1>{this.state.name || this.props.name} component</h1>
-      <input onChange={this.onChange} />
-      <img src={'//' + (this.state.name || this.props.name) + '.jpg.to'} />
+export default class {{PascalName}} extends React.Component {
+  render(){
+    return <div className={namespace}>
+      <h1 className={`${namespace}-title`}>{this.props.name} component</h1>
+      <img src={`//${this.props.name}.jpg.to`} />
     </div>
   }
 })
+
+{{PascalName}}.propTypes = {
+  name: PropTypes.string.isRequired
+}

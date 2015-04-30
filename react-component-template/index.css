@@ -1,9 +1,9 @@
 :root {
   /* define your namespaced vars here
-  --fontSize-normal-{{name}}: 1rem;
+  --fontSize-normal-{{camelName}}: 1rem;
   */
 }
 
-.{{name}} {
+.{{camelName}} {
 
 }

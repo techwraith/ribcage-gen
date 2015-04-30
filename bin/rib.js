@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-'use strict';
+'use strict'
 
 var gen = require('../index')
   , argv = require('minimist')(process.argv.slice(2))

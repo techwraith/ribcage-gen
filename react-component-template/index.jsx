@@ -1,4 +1,4 @@
-import {default as React, PropTypes} from 'react'
+import React, {PropTypes} from 'react'
 const namespace = '{{camelName}}'
 
 export default class {{PascalName}} extends React.Component {

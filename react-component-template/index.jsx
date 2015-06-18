@@ -23,3 +23,7 @@ export default class {{PascalName}} extends Component {
 {{PascalName}}.propTypes = {
   name: PropTypes.string.isRequired
 }
+
+{{PascalName}}.defaultProps = {
+  name: {{camelName}}
+}

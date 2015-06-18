@@ -1,6 +1,6 @@
 {
   "name": "ribcage-gen",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "description": "A generator script for ribcage components",
   "main": "index.js",
   "bin": {

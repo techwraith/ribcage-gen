@@ -15,7 +15,7 @@ export default class {{PascalName}} extends Component {
   render () {
     return (<div className={namespace}>
       <h1 className={`${namespace}-title`}>{this.props.name} component</h1>
-      <img src={`//${this.props.name}.jpg.to`} />
+      <img src={`http://loremflickr.com/600/600/${this.props.name}`} />
     </div>)
   }
 }

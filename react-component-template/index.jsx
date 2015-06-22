@@ -25,5 +25,5 @@ export default class {{PascalName}} extends Component {
 }
 
 {{PascalName}}.defaultProps = {
-  name: {{camelName}}
+  name: '{{camelName}}'
 }

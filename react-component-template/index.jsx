@@ -1,7 +1,7 @@
 import React, {PropTypes, Component} from 'react'
 import {addons} from 'react/addons'
+import styles from './index.css'
 const {shouldComponentUpdate} = addons.PureRenderMixin
-const namespace = '{{camelName}}'
 
 export default class {{PascalName}} extends Component {
   // use the pure-render mixin without the mixin. This allows us to use es6
@@ -13,8 +13,8 @@ export default class {{PascalName}} extends Component {
   }
 
   render () {
-    return (<div className={namespace}>
-      <h1 className={`${namespace}-title`}>{this.props.name} component</h1>
+    return (<div>
+      <h1 className={styles.title}>{this.props.name} component</h1>
       <img src={`http://loremflickr.com/600/600/${this.props.name}`} />
     </div>)
   }
@@ -25,5 +25,5 @@ export default class {{PascalName}} extends Component {
 }
 
 {{PascalName}}.defaultProps = {
-  name: '{{camelName}}'
+  name: '{{titleName}}'
 }

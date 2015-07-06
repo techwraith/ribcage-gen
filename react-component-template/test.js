@@ -1,35 +1,32 @@
 import test from 'tape'
+import HelloWorld from './index.jsx'
 import React from 'react'
 import {addons} from 'react/addons'
-import {{PascalName}} from './index.jsx'
+import testTree from 'react-test-tree'
 const {TestUtils} = addons
-const {Simulate, renderIntoDocument, isElement, createRenderer} = TestUtils
-const getReactNode = (dom, node) => TestUtils.findRenderedDOMComponentWithTag(dom, node)
-const getDOMNode = (dom, node) => getReactNode(dom, node).getDOMNode()
-const getDOMNodes = (dom, type) => TestUtils.scryRenderedDOMComponentsWithTag(dom, type)
-const getDOMNodeText = (dom, node) => getDOMNode(dom, node).textContent
+const {isElement} = TestUtils
 
-test('{{PascalName}}: constructor', (t) => {
-  const {{camelName}} = React.createElement({{PascalName}})
+test('HelloWorld: constructor', (t) => {
+  const helloWorld = React.createElement(HelloWorld)
   t.ok(
-    isElement({{camelName}})
+    isElement(helloWorld)
     , 'is a valid react component'
   )
 
   t.end()
 })
 
-// TODO: delete me. I'm just an example!
-test('{{PascalName}} rendered DOM', (t) => {
-  const name = 'Bert'
-  const {{camelName}} = React.createElement({{PascalName}}, {name})
-  const dom = renderIntoDocument({{camelName}})
+// I'm a sample test, you probably want to delete me
+test('HelloWorld: render', (t) => {
+  const name = 'john doe'
+  const tree = testTree(<HelloWorld name={name} />)
 
   t.equal(
-    getDOMNodeText(dom, 'h1')
+    tree.title.innerText
     , name
-    , 'renders the `name` prop'
+    , 'puts the name prop in the title'
   )
 
   t.end()
 })
+

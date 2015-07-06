@@ -1,6 +1,8 @@
 import React, {PropTypes, Component} from 'react'
+import ReactDOM from 'react-dom'
 import {addons} from 'react/addons'
 const {shouldComponentUpdate} = addons.PureRenderMixin
+
 const namespace = '{{camelName}}'
 
 export default class {{PascalName}} extends Component {

@@ -9,9 +9,14 @@ export default class {{PascalName}} extends Component {
     // initialize state values
     this.state = {}
 
-    // bind your custom methods here (instead of render for example)
-    // example:
-    // this._handleSomething = this._handleSomething.bind(this)
+  }
+
+  static propTypes = {
+    name: PropTypes.string.isRequired
+  }
+
+  static defaultProps = {
+    name: '{{titleName}}'
   }
 
   // use the pure-render mixin without the mixin. This allows us to use es6
@@ -30,10 +35,3 @@ export default class {{PascalName}} extends Component {
   }
 }
 
-{{PascalName}}.propTypes = {
-  name: PropTypes.string.isRequired
-}
-
-{{PascalName}}.defaultProps = {
-  name: '{{titleName}}'
-}

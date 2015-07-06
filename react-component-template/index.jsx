@@ -4,6 +4,16 @@ import styles from './index.css'
 const {shouldComponentUpdate} = addons.PureRenderMixin
 
 export default class {{PascalName}} extends Component {
+  constructor (props) {
+    super(props)
+    // initialize state values
+    this.state = {}
+
+    // bind your custom methods here (instead of render for example)
+    // example:
+    // this._handleSomething = this._handleSomething.bind(this)
+  }
+
   // use the pure-render mixin without the mixin. This allows us to use es6
   // classes and avoid "magic" code. NOTE: if this component is used directly
   // by react-router, you should delete it, otherwise, the <Link> component will

@@ -4,12 +4,6 @@ import styles from './index.css'
 const {shouldComponentUpdate} = addons.PureRenderMixin
 
 export default class {{PascalName}} extends Component {
-  constructor (props) {
-    super(props)
-    // initialize state values
-    this.state = {}
-
-  }
 
   static propTypes = {
     name: PropTypes.string.isRequired
@@ -17,6 +11,13 @@ export default class {{PascalName}} extends Component {
 
   static defaultProps = {
     name: '{{titleName}}'
+  }
+
+  constructor (props) {
+    super(props)
+    // initialize state values
+    this.state = {}
+
   }
 
   // use the pure-render mixin without the mixin. This allows us to use es6

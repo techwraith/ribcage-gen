@@ -8,6 +8,7 @@ const {isElement} = TestUtils
 
 test('HelloWorld: constructor', (t) => {
   const helloWorld = React.createElement(HelloWorld)
+
   t.ok(
     isElement(helloWorld)
     , 'is a valid react component'

@@ -7,14 +7,17 @@ export default class {{PascalName}} extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired
   }
+
   static defaultProps = {
     name: '{{titleName}}'
   }
+
   constructor (props) {
     super(props)
     // initialize state values
     this.state = {}
   }
+
   // use the pure-render mixin without the mixin. This allows us to use es6
   // classes and avoid "magic" code. NOTE: if this component is used directly
   // by react-router, you should delete it, otherwise, the <Link> component will
@@ -22,6 +25,7 @@ export default class {{PascalName}} extends Component {
   shouldComponentUpdate (...args) {
     return shouldComponentUpdate.apply(this, args)
   }
+
   render () {
     return (<div>
       <h1 className={styles.title} ref="title">{this.props.name} component</h1>

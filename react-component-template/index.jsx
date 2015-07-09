@@ -1,8 +1,10 @@
 import React, {PropTypes, Component} from 'react'
-import {addons} from 'react/addons'
+import pureRender from 'pure-render-decorator'
 import styles from './index.css'
-const {shouldComponentUpdate} = addons.PureRenderMixin
 
+// NOTE: if this component is used directly by react-router, not use the
+// pureRender decorator. It will cause the <Link> component to not re-render.
+@pureRender
 export default class {{PascalName}} extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired
@@ -12,19 +14,8 @@ export default class {{PascalName}} extends Component {
     name: '{{titleName}}'
   }
 
-  constructor (props) {
-    super(props)
-    // initialize state values
-    this.state = {}
-  }
-
-  // use the pure-render mixin without the mixin. This allows us to use es6
-  // classes and avoid "magic" code. NOTE: if this component is used directly
-  // by react-router, you should delete it, otherwise, the <Link> component will
-  // not cause a re-render
-  shouldComponentUpdate (...args) {
-    return shouldComponentUpdate.apply(this, args)
-  }
+  // initialize state values
+  state = {}
 
   render () {
     return (<div>

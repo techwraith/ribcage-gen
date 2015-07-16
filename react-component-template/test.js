@@ -3,11 +3,12 @@ import {{PascalName}} from './index.jsx'
 import React from 'react'
 import {addons} from 'react/addons'
 import testTree from 'react-test-tree'
+import defaultProps from './example/data.js'
 const {TestUtils} = addons
 const {isElement} = TestUtils
 
 test('{{PascalName}}: constructor', (t) => {
-  const {{camelName}} = React.createElement({{PascalName}})
+  const {{camelName}} = React.createElement({{PascalName}}, defaultProps)
 
   t.ok(
     isElement({{camelName}})
@@ -20,7 +21,7 @@ test('{{PascalName}}: constructor', (t) => {
 // I'm a sample test, you probably want to delete me
 test('{{PascalName}}: render', (t) => {
   const name = 'john doe'
-  const tree = testTree(<{{PascalName}} name={name} />)
+  const tree = testTree(<{{PascalName}} {...defaultProps} />)
 
   t.equal(
     tree.title.innerText
@@ -28,6 +29,7 @@ test('{{PascalName}}: render', (t) => {
     , 'puts the name prop in the title'
   )
 
+  tree.dispose()
   t.end()
 })
 

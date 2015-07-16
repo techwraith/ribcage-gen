@@ -15,5 +15,6 @@ Defaults to "hi". Controls X.
 
 ## CSS Variables
 
-## CSS Classes
-CSS classes that might be useful for the outside world. Probably not too useful if this is mostly a JS component.
+## Static Methods
+### `methodName(<String> option)`
+Does a thing!

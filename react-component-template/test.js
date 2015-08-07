@@ -15,6 +15,20 @@ test('{{PascalName}}: constructor', (t) => {
     , 'is a valid react component'
   )
 
+  // NOTE: if you're using redux, you'll need to change this test to
+  // `<PageComponent.DecoratedComponent />`
+  // NOTE: this test can be annoying but it triggers off many other automatic
+  // tests that are important to have pass. Have your component return `null`
+  // rather than throwing
+  // NOTE: For real, don't remove this test, _especially_ if this is page
+  const _warn = console.warn
+  console.warn = noop
+  t.doesNotThrow(
+    testTree.bind(React, <{{PascalName}} />)
+    , 'does not throw when there are no props, to ensure a loading state is possible'
+  )
+  console.warn = _warn
+
   t.end()
 })
 

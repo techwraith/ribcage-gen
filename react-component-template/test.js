@@ -22,7 +22,7 @@ test('{{PascalName}}: constructor', (t) => {
   // rather than throwing
   // NOTE: For real, don't remove this test, _especially_ if this is page
   const _warn = console.warn
-  console.warn = noop
+  console.warn = () => {}
   t.doesNotThrow(
     testTree.bind(React, <{{PascalName}} />)
     , 'does not throw when there are no props, to ensure a loading state is possible'

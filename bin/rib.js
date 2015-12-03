@@ -6,5 +6,11 @@ var gen = require('../index')
   , type = argv.t || argv.type || 'backbone'
 
 gen({target: argv._[0], type: type}, function (context) {
-  console.log('created the ' + context.PascalName + ' component')
+  var msg = ''
+  if (context.exists) {
+    msg = 'Directory for "' + context.name + '" already exists! Starting demo instead :)'
+  }else {
+    msg = 'Created the ' + context.PascalName + ' component'
+  }
+  console.log(msg)
 })

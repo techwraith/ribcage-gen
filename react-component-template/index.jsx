@@ -19,7 +19,7 @@ export default class {{PascalName}} extends Component {
 
   render () {
     return (<div>
-      <h1 className={styles.title} ref="title">{this.props.name} component</h1>
+      <h1 className={styles.title} testRef="title">{this.props.name} component</h1>
       <img src={`http://loremflickr.com/600/600/${this.props.name}`} alt={this.props.name} />
     </div>)
   }
